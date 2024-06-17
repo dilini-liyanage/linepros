@@ -53,6 +53,7 @@ function ProductsPage() {
             textColor="text-white"
             iconColor="white"
             textSize="text-lg"
+             iconName="chevronRight"
             onClick={handleClick}
           />
           <Button
@@ -63,6 +64,7 @@ function ProductsPage() {
             textColor="text-white"
             iconColor="white"
             textSize="text-lg"
+             iconName="chevronRight"
             onClick={handleClick}
             className="mt-5"
           />
