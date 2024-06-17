@@ -35,6 +35,11 @@ export default function Home() {
         <section id="contacts" className="h-auto">
           <ContactsPage />
         </section>
+        <section>
+        <Footer/>
+        </section>
+
+        
       </div>
     </div>
   );
