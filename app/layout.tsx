@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Open_Sans } from "next/font/google";
 
-const roboto = Roboto({
+import "./globals.css";
+
+const openSans = Open_Sans({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -22,18 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={openSans.className}>
         <div className="h-screen flex flex-col">
-            
           <div className="overflow-auto flex-grow">
             {children}
           </div>
-          
         </div>
-
-        {/* <Header /> */}
-
-        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -11,21 +11,26 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Button from "@/components/button";
 
 function AboutPage() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
+  const handleClick = () => {
+    console.log('Button clicked');
+  };
+
   return (
     <div className="pt-20  bg-white">
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-3xl mx-auto">
         <div className="py-8 text-4xl text-gray-400 font-extralight text-center leading-snug">
           The <span className="font-bold">LinePros</span> team developed
-          products to address gaps in the marketplace and build superior
-          solutions. Since our inception in 2010, our development has continued
-          to close vulnerabilities and highlight opportunities. Our industry
-          knowledge and technological expertise make us a necessary strategic
+          products to address gaps in the marketplace and build <br/>
+          superior solutions. Since our inception in 2010, our development has continued to close <br/>
+          vulnerabilities and highlight opportunities. Our industry knowledge and technological <br/>
+          expertise make us a necessary strategic
           partner.
         </div>
         <div className="flex py-12 w-full items-center">
@@ -51,7 +56,7 @@ function AboutPage() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#BB1515"
-                  stroke-width="3"
+                  stroke-width="2"
                   stroke-linejoin="round"
                   className="icon icon-tabler icons-tabler-outline icon-tabler-plus"
                 >
@@ -75,7 +80,7 @@ function AboutPage() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#BB1515"
-                  stroke-width="3"
+                  stroke-width="2"
                   stroke-linejoin="round"
                   className="icon icon-tabler icons-tabler-outline icon-tabler-plus"
                 >
@@ -94,26 +99,15 @@ function AboutPage() {
 
         <div className="flex w-full items-center">
           <div className="w-1/2">
-            <button className="flex w-auto p-3 gap-5 text-white bg-[#F01E2A] rounded-md justify-between">
-              <div className="text-2xl font-bold px-12">
-                VISIT OUR LIVE DEMO SITE
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 6l6 6l-6 6" />
-              </svg>
-            </button>
+            <Button
+              text="VISIT OUR LIVE DEMO SITE"
+              width="w-"
+              backgroundColor="#F01E2A"
+              textColor="text-white"
+              iconColor="white"
+              textSize="text-lg"
+              onClick={handleClick}
+            />
           </div>
           <div className="w-1/2 space-y-12 py-16 text-3xl leading-relaxed text-gray-400">
             100% stable, customizable, and integration-friendly. <br />

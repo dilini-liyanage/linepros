@@ -1,50 +1,46 @@
+"use client"
 import React from "react";
 import Image from "next/image";
-import Header from "@/components/header";
+import Button from "@/components/button";
 
 function HomePage() {
+
+  const handleClick = () => {
+    console.log('Button clicked');
+  }
   return (
     <div className="min-h-fit pt-24">
-      <div className="max-w-screen-2xl mx-auto justify-between grid grid-cols-12">
-        <div className="col-span-7">
+      <div className="max-w-screen-3xl mx-auto justify-between grid grid-cols-12">
+        <div className="col-span-8">
           <Image
-            src="/laptop.png" // Path to your image
+            src="/laptop.png"
             height="1000"
             width="1200"
-            quality={100} // Optional: define the quality of the image
-            alt="Background Image" // Optional: define a meaningful alt attribute
+            quality={100}
+            alt="Background Image"
           />
         </div>
-        <div className="flex flex-col col-span-5 -ms-10  py-28 text-white ">
-          <div className="text-5xl space-y-2 font-thin">
+        <div className="flex flex-col col-span-4 -ms-24  py-28 text-white ">
+          <div className="text-5xl space-y-2 mt-8">
             <div>
               We are the <span className="font-black">#1 online</span>
             </div>
             <div>
-              {" "}
-              <span className="font-black"> betting software</span> in
+              <span className="font-black"> betting software</span> <span className=" font-extralight">in </span> 
             </div>
-            <div>Latin America</div>
+            <div className=" font-extralight">Latin America</div>
           </div>
-
-          <button className="flex w-72 mt-16 p-3 border-4 border-red-700 rounded-md justify-between">
-            <div className="text-3xl font-bold">BOOK A DEMO</div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="36"
-              height="36"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </svg>
-          </button>
+          <Button
+            text="BOOK A DEMO"
+            width="w-72"
+            backgroundColor="transparent"
+            border="border-4 border-red-700"
+            textColor="text-white"
+            iconColor="white"
+            textSize="text-lg"
+            className="mt-16"
+            onClick={handleClick}
+          />
         </div>
       </div>
     </div>

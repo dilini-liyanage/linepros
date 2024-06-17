@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <div className="relative w-full bg-green-200">
       <Image
-        src="/1.png" // Path to your image
-        layout="fill" // This will make the image fill its parent
-        objectFit="cover" // This will scale the image to the parent width
-        quality={100} // Optional: define the quality of the image
-        alt="Background Image" // Optional: define a meaningful alt attribute
+        src="/1.png"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        alt="Background Image"
       />
       <div className="relative z-50">
         <Header />

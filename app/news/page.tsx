@@ -5,7 +5,7 @@ import Image from "next/image";
 function NewsPage() {
   return (
     <div className="pt-16 bg-white">
-      <div className=" max-w-screen-2xl mx-auto space-y-12 py-12">
+      <div className=" max-w-screen-3xl mx-auto space-y-12 py-12">
         <div className="tracking-widest text-2xl">NEWS</div>
         <div className="text-7xl leading-tight text-gray-500">
           Lorem Ipsum is <br />

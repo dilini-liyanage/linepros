@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import Button from "@/components/button";
 
 function ProductsPage() {
   const cards = [
@@ -14,8 +16,12 @@ function ProductsPage() {
     { name: "Card 9" },
   ];
 
+  const handleClick = () => {
+    console.log("Button clicked");
+  };
+
   return (
-    <div className="pt-20 max-w-screen-2xl mx-auto">
+    <div className="pt-20 max-w-screen-3xl mx-auto">
       <div className="text-7xl text-white leading-tight">
         The most advance <br />
         features for the best <br /> results.
@@ -39,46 +45,27 @@ function ProductsPage() {
           <div className="text-5xl font-bold text-white mb-10 leading-tight">
             Ready for <br /> more?
           </div>
-          <button className="flex w-4/5 p-3 gap-5 text-white bg-[#F01E2A] rounded-md justify-between mb-6">
-            <div className="text-2xl font-bold px-12">
-            CONTACT OUR SALES TEAM
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="36"
-              height="36"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </svg>
-          </button>
-          <button className="flex w-4/5 p-3 gap-5 text-white border-2 border-[#F01E2A] rounded-md justify-between">
-            <div className="text-2xl font-bold px-12">
-              VISIT OUR LIVE DEMO SITE
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="36"
-              height="36"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </svg>
-          </button>
+          <Button
+            text="CONTACT OUR SALES TEAM"
+            width="w-[25vw]"
+            backgroundColor="#F01E2A"
+            border="border-2 border-[#F01E2A]"
+            textColor="text-white"
+            iconColor="white"
+            textSize="text-lg"
+            onClick={handleClick}
+          />
+          <Button
+            text="VISIT OUR LIVE DEMO SITE"
+            width="w-[25vw]"
+            backgroundColor="transparent"
+            border="border-2 border-[#F01E2A]"
+            textColor="text-white"
+            iconColor="white"
+            textSize="text-lg"
+            onClick={handleClick}
+            className="mt-5"
+          />
         </div>
         <div className="w-3/5 flex justify-center">
           <Image
