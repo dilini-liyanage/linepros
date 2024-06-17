@@ -1,19 +1,24 @@
-import React from 'react'
+import React from 'react';
 
 type Props = {
-    text: string,
-    border: string,
-    backgroundColor: string,
-    textColor: string,
-    iconColor: string,
-    textSize: string,
-    onClick: () => void
-}
+    text: string;
+    width: string;
+    border?: string;
+    backgroundColor: string;
+    textColor: string;
+    iconColor: string;
+    textSize: string;
+    className?: string;
+    onClick: () => void;
+};
 
-function button({ text, border, backgroundColor, textColor, iconColor, onClick , textSize }: Props) {
+function Button({ text, width, border, backgroundColor, textColor, iconColor, textSize,className , onClick }: Props) {
     return (
-        <button className={"flex w-72 mt-16 p-3 rounded-md justify-between " + border + " " + textColor+ " " + backgroundColor} onClick={()=>onclick()}>
-            <div className={"font-bold ps-20 "+ textSize}>{text}</div>
+        <button
+            className={`flex ${width}  p-3 rounded-lg justify-between items-center ${border} ${textColor} bg-[${backgroundColor}] ${className}`}
+            onClick={onClick}
+        >
+            <div className={` font-semibold ps-12 pe-4 ${textSize}`}>{text}</div>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -21,16 +26,16 @@ function button({ text, border, backgroundColor, textColor, iconColor, onClick ,
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke={iconColor}
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right me-2"
             >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 6l6 6l-6 6" />
+                <path d="M9 6l6 6-6 6" />
             </svg>
         </button>
-    )
+    );
 }
 
-export default button
+export default Button;
