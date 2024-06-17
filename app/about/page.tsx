@@ -124,7 +124,7 @@ function AboutPage() {
         </div>
       </div>
 
-      <div>
+      <div className=" w-full">
         <Carousel
           plugins={[plugin.current]}
           className="w-full max-w-xs"

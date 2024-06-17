@@ -5,8 +5,8 @@ import Header from "@/components/header";
 function HomePage() {
   return (
     <div className="min-h-fit pt-24">
-      <div className="flex max-w-screen-2xl mx-auto justify-between">
-        <div className="relative">
+      <div className="max-w-screen-2xl mx-auto justify-between grid grid-cols-12">
+        <div className="col-span-7">
           <Image
             src="/laptop.png" // Path to your image
             height="1000"
@@ -15,7 +15,7 @@ function HomePage() {
             alt="Background Image" // Optional: define a meaningful alt attribute
           />
         </div>
-        <div className="ml-[130vh] flex flex-col absolute z-10 py-28 text-white ">
+        <div className="flex flex-col col-span-5 -ms-10  py-28 text-white ">
           <div className="text-5xl space-y-2 font-thin">
             <div>
               We are the <span className="font-black">#1 online</span>
