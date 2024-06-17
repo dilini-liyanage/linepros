@@ -16,7 +16,7 @@ const NavLink: FC<NavLinkProps> = ({ href, children }) => (
 const Header: FC = () => {
   return (
     <div className="fixed w-full bg-transparent py-5">
-      <div className="flex justify-between max-w-screen-3xl mx-auto p-4">
+      <div className="flex justify-between max-w-screen-2xl mx-auto p-4">
         <div className="text-xl font-semibold">
         <Image
               src="/logo.png" // Path to your image
