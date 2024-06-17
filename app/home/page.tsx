@@ -26,7 +26,7 @@ function HomePage() {
               We are the <span className="font-black">#1 online</span>
             </div>
             <div>
-              <span className="font-black"> betting software</span> <span className=" font-extralight">in </span> 
+              <span className="font-black"> betting software</span> <span className=" font-extralight">in </span>
             </div>
             <div className=" font-extralight">Latin America</div>
           </div>
@@ -40,6 +40,7 @@ function HomePage() {
             textSize="text-lg"
             className="mt-16"
             onClick={handleClick}
+            iconName="chevronRight"
           />
         </div>
       </div>

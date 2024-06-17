@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from './Icon';
 
 type Props = {
     text: string;
@@ -10,30 +11,18 @@ type Props = {
     textSize: string;
     className?: string;
     onClick: () => void;
+    iconName: 'chevronRight';
+
 };
 
-function Button({ text, width, border, backgroundColor, textColor, iconColor, textSize,className , onClick }: Props) {
+function Button({ text, width, border, backgroundColor, textColor, iconColor, textSize, className, onClick, iconName }: Props) {
     return (
         <button
             className={`flex ${width}  p-3 rounded-lg justify-between items-center ${border} ${textColor} bg-[${backgroundColor}] ${className}`}
             onClick={onClick}
         >
             <div className={` font-semibold ps-12 pe-4 ${textSize}`}>{text}</div>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={iconColor}
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right me-2"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 6l6 6-6 6" />
-            </svg>
+            <Icon iconName={iconName} iconColor={iconColor} className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right me-2" />
         </button>
     );
 }

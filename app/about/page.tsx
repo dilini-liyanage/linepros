@@ -12,6 +12,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Button from "@/components/button";
+import Image from "next/image";
+import carouselImageOne from "@/public/carousel-1.png";
+import carouselImageTwo from "@/public/carousel-2.png";
+import carouselImageThree from "@/public/carousel-3.png";
+
+
 
 function AboutPage() {
   const plugin = React.useRef(
@@ -22,14 +28,21 @@ function AboutPage() {
     console.log('Button clicked');
   };
 
+  const cardItems = [
+    { 'title': 'Title 1', 'content': 'Content 1', 'image': carouselImageOne },
+    { 'title': 'Title 2', 'content': 'Content 2', 'image': carouselImageTwo },
+    { 'title': 'Title 3', 'content': 'Content 3', 'image': carouselImageThree },
+    { 'title': 'Title 4', 'content': 'Content 4', 'image': carouselImageOne },
+    { 'title': 'Title 5', 'content': 'Content 5', 'image': carouselImageTwo },
+  ]
   return (
-    <div className="pt-20  bg-white">
+    <div className="pt-20  bg-white w-full">
       <div className="max-w-screen-3xl mx-auto">
         <div className="py-8 text-4xl text-gray-400 font-extralight text-center leading-snug">
           The <span className="font-bold">LinePros</span> team developed
-          products to address gaps in the marketplace and build <br/>
-          superior solutions. Since our inception in 2010, our development has continued to close <br/>
-          vulnerabilities and highlight opportunities. Our industry knowledge and technological <br/>
+          products to address gaps in the marketplace and build <br />
+          superior solutions. Since our inception in 2010, our development has continued to close <br />
+          vulnerabilities and highlight opportunities. Our industry knowledge and technological <br />
           expertise make us a necessary strategic
           partner.
         </div>
@@ -107,6 +120,7 @@ function AboutPage() {
               iconColor="white"
               textSize="text-lg"
               onClick={handleClick}
+              iconName="chevronRight"
             />
           </div>
           <div className="w-1/2 space-y-12 py-16 text-3xl leading-relaxed text-gray-400">
@@ -118,25 +132,31 @@ function AboutPage() {
         </div>
       </div>
 
-      <div className=" w-full">
+      <div className=" w-full justify-center  flex">
         <Carousel
-          plugins={[plugin.current]}
-          className="w-full max-w-xs"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+          className="w-[75vw] sm:w-[85vw] mx-4 md:w-[80vw] pb-20"
+
         >
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
+            {cardItems.map((item, index) => (
+              <CarouselItem key={index} className="2xl:basis-1/3 xl:basis-1/2 basis-full">
+                <Card>
+                  <CardContent className=" flex items-center justify-center p-0"> 
+                    <Image
+                      src={item.image}
+                      alt="Background Image"
+                    />
+                  </CardContent>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
