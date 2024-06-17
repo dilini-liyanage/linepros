@@ -16,6 +16,7 @@ import Image from "next/image";
 import carouselImageOne from "@/public/carousel-1.png";
 import carouselImageTwo from "@/public/carousel-2.png";
 import carouselImageThree from "@/public/carousel-3.png";
+import CustomButton from "@/components/button";
 
 
 
@@ -112,7 +113,7 @@ function AboutPage() {
 
         <div className="flex w-full items-center">
           <div className="w-1/2">
-            <Button
+            <CustomButton
               text="VISIT OUR LIVE DEMO SITE"
               width="w-"
               backgroundColor="#F01E2A"

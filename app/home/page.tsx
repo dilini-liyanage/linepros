@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/components/button";
+import CustomButton from "@/components/button";
 
 function HomePage() {
 
@@ -30,7 +31,7 @@ function HomePage() {
             </div>
             <div className=" font-extralight">Latin America</div>
           </div>
-          <Button
+          <CustomButton
             text="BOOK A DEMO"
             width="w-72"
             backgroundColor="transparent"

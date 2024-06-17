@@ -15,7 +15,7 @@ type Props = {
 
 };
 
-function Button({ text, width, border, backgroundColor, textColor, iconColor, textSize, className, onClick, iconName }: Props) {
+function CustomButton({ text, width, border, backgroundColor, textColor, iconColor, textSize, className, onClick, iconName }: Props) {
     return (
         <button
             className={`flex ${width}  p-3 rounded-lg justify-between items-center ${border} ${textColor} bg-[${backgroundColor}] ${className}`}
@@ -27,4 +27,4 @@ function Button({ text, width, border, backgroundColor, textColor, iconColor, te
     );
 }
 
-export default Button;
+export default CustomButton;

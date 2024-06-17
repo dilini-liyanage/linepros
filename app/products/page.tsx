@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/components/button";
+import CustomButton from "@/components/button";
 
 function ProductsPage() {
   const cards = [
@@ -45,7 +46,7 @@ function ProductsPage() {
           <div className="text-5xl font-bold text-white mb-10 leading-tight">
             Ready for <br /> more?
           </div>
-          <Button
+          <CustomButton
             text="CONTACT OUR SALES TEAM"
             width="w-[25vw]"
             backgroundColor="#F01E2A"
@@ -56,7 +57,7 @@ function ProductsPage() {
              iconName="chevronRight"
             onClick={handleClick}
           />
-          <Button
+          <CustomButton
             text="VISIT OUR LIVE DEMO SITE"
             width="w-[25vw]"
             backgroundColor="transparent"
